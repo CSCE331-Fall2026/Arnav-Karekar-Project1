@@ -1,21 +1,29 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-<title>TEST</title>
+<title>Arnav Karekar - Home</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link rel="stylesheet" href="styles.css">
+<link id="theme" rel="stylesheet" href="css/dark.css">
+<script>
+function toggleTheme() {
+  document.getElementById('theme').href = document.getElementById('theme').href.endsWith('css/dark.css') ? 'css/light.css' : 'css/dark.css';
+}
+</script>
 </head>
 
 <body>
+<div class="header">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td align="center"><h3>HOWDY!!</h3></td>
+    <td class="brand">Arnav Karekar</td>
+    <td class="nav" align="right"><a href="index.html">Home</a><a href="activities.html">Activities</a><a href="portfolio.html">Portfolio</a><a href="genai.html">Experience (GenAI)</a><button onclick="toggleTheme()">Theme</button></td>
   </tr>
+</table>
+</div>
+<table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
   <tr>
-    <td align="center"><a href="index.html">Home</a> | <a href="activities.html">Activities</a> | <a href="portfolio.html">Portfolio</a> | <a href="genai.thml">GenAI</a></td>
-  </tr>
-  <tr>
-    <td align="center"><br><br>Welcome to my abode.<br>I'm Arnav Karekar, I'm a computer science student at Texas A&M University, and I'm a curious builder and technology enthusiast who enjoys exploring projects, learning new tools, and creating useful things.<br>Visit my website at <a href="http://arnavkarekar.com">arnavkarekar.com</a></td>
+    <td align="left" width="60%"><h3 class="welcome">Welcome</h3><br>I'm Arnav Karekar, I'm a computer science student at Texas A&M University, and I'm a curious builder and technology enthusiast who enjoys exploring projects, learning new tools, and creating useful things.<br>Visit my website at <a href="http://arnavkarekar.com">arnavkarekar.com</a><br><br><a class="btn" href="activities.html">See More</a></td>
+    <td align="center"><img class="headshot" src="images/headshot.png" alt="Headshot of Arnav Karekar"></td>
   </tr>
 </table>
 
