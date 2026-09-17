@@ -3,10 +3,18 @@
 <head>
 <title>Arnav Karekar - Portfolio</title>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<link id="theme" rel="stylesheet" href="css/dark.css">
+<link id="theme" rel="stylesheet" href="css/aggie.css">
 <script>
 function toggleTheme() {
-	document.getElementById('theme').href = document.getElementById('theme').href.endsWith('css/dark.css') ? 'css/light.css' : 'css/dark.css';
+	var t = document.getElementById('theme');
+	var btn = document.getElementById('themeBtn');
+	if (t.href.indexOf('aggie') >= 0) {
+		t.href = 'css/navy.css';
+		btn.innerHTML = 'Aggie';
+	} else {
+		t.href = 'css/aggie.css';
+		btn.innerHTML = 'Arrakis';
+	}
 }
 </script>
 </head>
@@ -15,20 +23,24 @@ function toggleTheme() {
 <div class="header">
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
-		<td class="brand">Arnav Karekar</td>
-		<td class="nav" align="right"><a href="index.html">Home</a><a href="activities.html">Activities</a><a href="portfolio.html">Portfolio</a><a href="genai.html">Experience (GenAI)</a><button onclick="toggleTheme()">Theme</button></td>
+		<td class="brand"><a href="index.html">Arnav Karekar</a></td>
+		<td class="nav" align="right"><a href="index.html">Home</a><a href="activities.html">Activities</a><a href="portfolio.html">Portfolio</a><a href="genai.html">Experience (GenAI)</a><button id="themeBtn" onclick="toggleTheme()">Arrakis</button></td>
 	</tr>
 </table>
 </div>
 <table class="content" width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
-		<td align="center"><h3>Portfolio</h3></td>
+		<td>
+			<table class="page-head" width="100%" border="0" cellspacing="0" cellpadding="0">
+				<tr>
+					<td valign="middle"><h3>Portfolio</h3></td>
+					<td align="right" valign="middle"><a href="docs/ArnavKarekarCyberResume.pdf" download>Download Resume</a></td>
+				</tr>
+			</table>
+		</td>
 	</tr>
 	<tr>
-		<td align="center"><a href="docs/ArnavKarekarCyberResume.pdf" download>Download Resume</a></td>
-	</tr>
-	<tr>
-		<td align="center">
+		<td>
 			<h4 class="section">Technical Interest and Qualifications</h4>
 			<p>I am interested in the application of machine learning in cyber security. I am currently working as an Undergraduate Researcher in the Department of Computer Science and Engineering at Texas A&amp;M University, where I study concept drift in Android malware detection. My work there involves building Python pipelines that extract features from the DREBIN and AndroZoo datasets, modeling how apps arrive over time, and benchmarking retraining strategies such as ADWIN and TRANSCENDENT to see which ones hold up best as real-world data shifts underneath a model.</p>
 			<p>Alongside my research I work as a Student Technician with Texas A&amp;M Technology Services, where I perform frontline triage in Proofpoint Endpoint DLP and investigate anomalous access patterns in Elastic Security and Cisco Identity Intelligence. Previously I interned in cybersecurity with the Arkansas Department of Education, automating Microsoft Defender remediation with PowerShell and running live-fire incident response exercises with Splunk, Security Onion, and Palo Alto Firewall.</p>
@@ -36,55 +48,72 @@ function toggleTheme() {
 		</td>
 	</tr>
 	<tr>
-		<td align="center"><h4 class="section">Technical Projects</h4></td>
+		<td><h4 class="section">Technical Projects</h4></td>
 	</tr>
 	<tr>
 		<td>
-			<table class="cards" width="100%" border="0" cellspacing="16" cellpadding="0">
+			<table class="project-list" width="100%" border="0" cellspacing="0" cellpadding="0">
 				<tr>
-					<td class="card" align="center" width="33%">
-						<p><strong>AggieMeals</strong><br>A meal prep app for Texas A&amp;M students who want to gain, lose, or maintain weight using the dining halls.</p>
+					<td class="card project-row">
+						<span class="num">1</span>
+						<p><strong>AggieMeals</strong> &mdash; A meal prep app for Texas A&amp;M students who want to gain, lose, or maintain weight using the dining halls.</p>
 						<a class="btn" href="https://github.com/arnavkarekar/AggieMeals">Learn More</a>
 					</td>
-					<td class="card" align="center" width="33%">
-						<p><strong>Phish Shield</strong><br>A Chrome extension that scores pages for phishing risk using URL heuristics, an offline ML classifier, and live page checks.</p>
+				</tr>
+				<tr>
+					<td class="card project-row">
+						<span class="num">2</span>
+						<p><strong>Phish Shield</strong> &mdash; A Chrome extension that scores pages for phishing risk using URL heuristics, an offline ML classifier, and live page checks.</p>
 						<a class="btn" href="https://github.com/arnavkarekar/phish-shield">Learn More</a>
 					</td>
-					<td class="card" align="center" width="33%">
-						<p><strong>Akh Mastani Website</strong><br>The website I built for my Texas A&amp;M Bollywood fusion dance team, live at akhmastani.com.</p>
+				</tr>
+				<tr>
+					<td class="card project-row">
+						<span class="num">3</span>
+						<p><strong>Akh Mastani Website</strong> &mdash; The website I built for my Texas A&amp;M Bollywood fusion dance team, live at akhmastani.com.</p>
 						<a class="btn" href="https://github.com/arnavkarekar/akh_mastani_website">Learn More</a>
 					</td>
 				</tr>
 				<tr>
-					<td class="card" align="center" width="33%">
-						<p><strong>Concept Drift Detection</strong><br>A Python project studying concept drift in the DREBIN Android malware dataset.</p>
+					<td class="card project-row">
+						<span class="num">4</span>
+						<p><strong>Concept Drift Detection</strong> &mdash; A Python project studying concept drift in the DREBIN Android malware dataset.</p>
 						<a class="btn" href="https://github.com/arnavkarekar/Concept-Drift-Detection-for-DREBIN-Dataset">Learn More</a>
 					</td>
-					<td class="card" align="center" width="33%">
-						<p><strong>AI Form Coach</strong><br>A Python Flask web app that gives AI-assisted feedback on exercise form.</p>
+				</tr>
+				<tr>
+					<td class="card project-row">
+						<span class="num">5</span>
+						<p><strong>AI Form Coach</strong> &mdash; A Python Flask web app that gives AI-assisted feedback on exercise form.</p>
 						<a class="btn" href="https://github.com/arnavkarekar/AI_Form_Coach">Learn More</a>
 					</td>
-					<td class="card" align="center" width="33%">
-						<p><strong>AggieMeals Backend</strong><br>The JavaScript service that powers the AggieMeals app.</p>
+				</tr>
+				<tr>
+					<td class="card project-row">
+						<span class="num">6</span>
+						<p><strong>AggieMeals Backend</strong> &mdash; The JavaScript service that powers the AggieMeals app.</p>
 						<a class="btn" href="https://github.com/arnavkarekar/AggieMealsBackend">Learn More</a>
 					</td>
 				</tr>
 				<tr>
-					<td class="card" align="center" width="33%">
-						<p><strong>Country Roads</strong><br>An A* search project that finds the fastest route between two real locations and visualizes the search with Pygame.</p>
+					<td class="card project-row">
+						<span class="num">7</span>
+						<p><strong>Country Roads</strong> &mdash; An A* search project that finds the fastest route between two real locations and visualizes the search with Pygame.</p>
 						<a class="btn" href="https://github.com/arnavkarekar/Country-Roads">Learn More</a>
 					</td>
-					<td class="card" align="center" width="33%">
-						<p><strong>All Projects</strong><br>Everything else I am building and experimenting with lives on my GitHub profile.</p>
+				</tr>
+				<tr>
+					<td class="card project-row">
+						<span class="num">8</span>
+						<p><strong>All Projects</strong> &mdash; Everything else I am building and experimenting with lives on my GitHub profile.</p>
 						<a class="btn" href="https://github.com/arnavkarekar">Learn More</a>
 					</td>
-					<td width="33%"></td>
 				</tr>
 			</table>
 		</td>
 	</tr>
 	<tr>
-		<td align="center">
+		<td>
 			<h4 class="section">Technical Skills</h4>
 			<p><strong>Certifications:</strong> CompTIA Security+, ISC2 Certified in Cybersecurity, AWS Certified Developer &ndash; Associate, and currently training for the Cisco Certified Network Associate (CCNA).</p>
 			<p><strong>Languages:</strong> Python, Java, JavaScript, C++, SQL, PowerShell, HTML, and CSS.</p>

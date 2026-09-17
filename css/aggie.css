@@ -1,0 +1,285 @@
+/* Design sketch 2 — Aggie / TAMU colors */
+body {
+  margin: 0;
+  display: flex;
+  align-items: stretch;
+  min-height: 100vh;
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.6;
+  color: #222;
+  /* maroon tab bar + white content, full page height */
+  background: linear-gradient(to right, #500000 260px, #ffffff 260px);
+}
+
+div.header {
+  width: 260px;
+  flex: 0 0 260px;
+  align-self: stretch;
+  background: transparent;
+  color: #fff;
+  padding: 32px 0;
+  box-sizing: border-box;
+}
+
+div.header table,
+div.header tr,
+div.header td {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+td.brand {
+  color: #fff;
+  font-size: 1.35rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 20px;
+  padding: 0 20px 16px;
+  border-bottom: 1px solid #fff;
+  box-sizing: border-box;
+}
+
+td.brand a {
+  color: #fff;
+  text-decoration: none;
+}
+
+td.nav a {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.15rem;
+  padding: 12px 20px;
+  margin: 0;
+  border-radius: 0;
+}
+
+td.nav a:hover {
+  background: #3c0000;
+}
+
+td.nav button {
+  display: inline-block;
+  width: auto;
+  margin: 20px 20px 0;
+  background: #ffffff;
+  color: #500000;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 22px;
+  font: bold 14px Georgia, serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+  box-sizing: border-box;
+}
+
+td.nav button:hover {
+  background: #f0e6e6;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+table.content,
+div.wrap {
+  flex: 1;
+  padding: 48px;
+  box-sizing: border-box;
+}
+
+div.wrap .hero .brand-mark {
+  font-size: 2.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 12px 0;
+}
+
+div.wrap .hero h1 {
+  font-size: 1.6rem;
+  margin: 0 0 12px;
+}
+
+div.wrap .hero-actions {
+  margin-top: 24px;
+}
+
+div.wrap .hero-actions a.btn {
+  margin-right: 12px;
+}
+
+div.wrap section.timeline {
+  margin-top: 24px;
+  padding-left: 20px;
+  border-left: 3px solid #500000;
+}
+
+div.wrap article.role {
+  margin-bottom: 28px;
+}
+
+div.wrap article.role h3 {
+  font-size: 1.4rem;
+  border-bottom: none;
+  display: block;
+}
+
+div.wrap .role-meta {
+  color: #666;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+div.wrap ul.tags {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+div.wrap ul.tags li {
+  display: inline-block;
+  margin: 0 8px 8px 0;
+  padding: 4px 10px;
+  background: #eee;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+div.wrap .skill-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+div.wrap .skill-grid h3 {
+  font-size: 1.1rem;
+  border-bottom: none;
+}
+
+table.page-head h3 {
+  margin: 0;
+}
+
+table.activity-grid {
+  margin-top: 16px;
+}
+
+td.activity-card {
+  background: #eee;
+  border-radius: 12px;
+  padding: 20px;
+  vertical-align: top;
+}
+
+img.feature {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+table.project-list {
+  border-collapse: separate;
+  border-spacing: 0 16px;
+}
+
+td.card {
+  background: #eee;
+  border-radius: 12px;
+  padding: 20px 24px;
+  font-size: 1.05rem;
+}
+
+td.project-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+td.project-row p {
+  flex: 1;
+  margin: 0;
+}
+
+span.num {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #500000;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+td.project-row .btn {
+  flex-shrink: 0;
+}
+
+button,
+a.btn,
+a[download] {
+  background: #500000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 22px;
+  font: bold 14px Georgia, serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+button:hover,
+a.btn:hover,
+a[download]:hover {
+  background: #3c0000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  text-decoration: none;
+}
+
+img.headshot {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  border-bottom: 3px solid #500000;
+  display: inline-block;
+  margin: 0.4em 0;
+}
+
+h3.welcome {
+  font-size: 3.4rem;
+}
+
+h4 {
+  font-size: 1.6rem;
+  margin: 0.6em 0;
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.65;
+}
+
+a {
+  color: #500000;
+}

@@ -1,5 +1,6 @@
 Landing page: https://people.tamu.edu/~arnavkarekar
 HTML-only version (no CSS): https://people.tamu.edu/~arnavkarekar/index_no_css.html
+Experience (GenAI): https://people.tamu.edu/~arnavkarekar/genai.html
 
 Design sketches:
 https://people.tamu.edu/~arnavkarekar/docs/design-sketch-1.png
@@ -7,6 +8,6 @@ https://people.tamu.edu/~arnavkarekar/docs/design-sketch-2.png
 
 Layout:
   *.html   pages (index, activities, portfolio, genai)
-  css/     light.css and dark.css themes
+  css/     aggie.css (TAMU), navy.css (Arrakis / cyberpunk-Dune), genai.css
   images/  headshot, homelab, dance photos
   docs/    resume PDF and design sketches
